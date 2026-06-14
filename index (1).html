@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS — Beyond Human. Powered by Intelligence.</title>
+  <meta name="description" content="Experience the next generation of AI-enhanced cybernetic technology that merges human potential with machine precision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="NEXUS home">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">NEXUS</span>
+        <span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#evolution">Evolution</a></li>
+        <li><a href="#testimonials">Clients</a></li>
+      </ul>
+      <a href="#cta" class="btn btn--nav">Initialize</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#features">Features</a>
+      <a href="#technology">Technology</a>
+      <a href="#evolution">Evolution</a>
+      <a href="#testimonials">Clients</a>
+      <a href="#cta" class="btn btn--nav">Initialize</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="cyber-grid" aria-hidden="true"></div>
+
+    <!-- Floating scan lines -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        <span class="mono">NEXUS CORTEX v4.1 — ONLINE</span>
+      </div>
+
+      <h1 class="hero__headline">
+        <span class="line line--1">Beyond</span>
+        <span class="line line--2">Human.</span>
+        <span class="line line--3">Powered by <em>Intelligence.</em></span>
+      </h1>
+
+      <p class="hero__sub">
+        Experience the next generation of AI-enhanced cybernetic technology that merges human potential with machine precision.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#features" class="btn btn--primary">
+          <span class="btn__inner">Explore Technology</span>
+          <span class="btn__glitch" aria-hidden="true">Explore Technology</span>
+        </a>
+        <a href="#technology" class="btn btn--ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Watch Demo
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="99.98">0</span><span class="stat__unit">%</span>
+          <span class="stat__label">Accuracy</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__num" data-count="12">0</span><span class="stat__unit">ms</span>
+          <span class="stat__label">Response</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__num" data-count="500">0</span><span class="stat__unit">M+</span>
+          <span class="stat__label">Data Points</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="cyborg-figure">
+        <div class="cyborg-core">
+          <div class="core-ring ring-1"></div>
+          <div class="core-ring ring-2"></div>
+          <div class="core-ring ring-3"></div>
+          <div class="core-pulse"></div>
+          <div class="core-center">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="cyborg-svg">
+              <!-- Head silhouette -->
+              <ellipse cx="60" cy="38" rx="22" ry="26" fill="#050505" stroke="#00D4FF" stroke-width="1.5"/>
+              <!-- Eye visor -->
+              <rect x="42" y="30" width="36" height="10" rx="5" fill="#7B2CBF" opacity="0.8"/>
+              <rect x="46" y="32" width="12" height="6" rx="3" fill="#00FFFF" opacity="0.9"/>
+              <rect x="62" y="32" width="12" height="6" rx="3" fill="#FF006E" opacity="0.9"/>
+              <!-- Circuit lines on head -->
+              <line x1="38" y1="38" x2="28" y2="38" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
+              <line x1="28" y1="38" x2="28" y2="50" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
+              <line x1="82" y1="38" x2="92" y2="38" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
+              <line x1="92" y1="38" x2="92" y2="50" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
+              <!-- Neck -->
+              <rect x="52" y="62" width="16" height="12" rx="2" fill="#111111" stroke="#00D4FF" stroke-width="1"/>
+              <line x1="56" y1="64" x2="56" y2="72" stroke="#00FFFF" stroke-width="1" opacity="0.7"/>
+              <line x1="60" y1="64" x2="60" y2="72" stroke="#00FFFF" stroke-width="1" opacity="0.7"/>
+              <line x1="64" y1="64" x2="64" y2="72" stroke="#00FFFF" stroke-width="1" opacity="0.7"/>
+              <!-- Shoulders / torso -->
+              <path d="M20 74 Q20 70 30 70 L90 70 Q100 70 100 74 L100 100 Q100 105 95 105 L25 105 Q20 105 20 100 Z" fill="#0a0a0a" stroke="#00D4FF" stroke-width="1.5"/>
+              <!-- Chest plate -->
+              <rect x="40" y="75" width="40" height="24" rx="4" fill="#111111" stroke="#7B2CBF" stroke-width="1"/>
+              <rect x="44" y="79" width="14" height="7" rx="2" fill="#7B2CBF" opacity="0.5"/>
+              <rect x="62" y="79" width="14" height="7" rx="2" fill="#7B2CBF" opacity="0.5"/>
+              <!-- Heart glow -->
+              <circle cx="60" cy="95" r="5" fill="#FF006E" opacity="0.8"/>
+              <circle cx="60" cy="95" r="8" fill="none" stroke="#FF006E" stroke-width="0.5" opacity="0.4" class="pulse-ring"/>
+              <!-- Shoulder armor detail -->
+              <path d="M20 74 L20 88 Q20 94 28 94 L36 88 L36 70" fill="#111111" stroke="#00D4FF" stroke-width="1"/>
+              <path d="M100 74 L100 88 Q100 94 92 94 L84 88 L84 70" fill="#111111" stroke="#00D4FF" stroke-width="1"/>
+              <!-- Data dots on torso -->
+              <circle cx="30" cy="80" r="2" fill="#00FFFF"/>
+              <circle cx="30" cy="86" r="2" fill="#00FFFF" opacity="0.5"/>
+              <circle cx="90" cy="80" r="2" fill="#00FFFF"/>
+              <circle cx="90" cy="86" r="2" fill="#00FFFF" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Floating data cards around figure -->
+        <div class="data-card data-card--1">
+          <span class="mono" style="font-size:10px;color:#00FFFF">NEURAL SYNC</span>
+          <div class="data-bar"><div class="data-bar__fill" style="width:87%"></div></div>
+          <span class="mono" style="font-size:9px;color:#888">87% CAPACITY</span>
+        </div>
+        <div class="data-card data-card--2">
+          <span class="mono" style="font-size:10px;color:#FF006E">THREAT LEVEL</span>
+          <span class="mono" style="font-size:18px;font-weight:700;color:#FF006E">NULL</span>
+        </div>
+        <div class="data-card data-card--3">
+          <span class="mono" style="font-size:10px;color:#7B2CBF">UPLINK</span>
+          <span class="mono" style="font-size:9px;color:#aaa">SECURED ✓</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="mono" style="font-size:11px;letter-spacing:3px;color:#555">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="features section" id="features" aria-labelledby="features-title">
+    <div class="container">
+      <div class="section-eyebrow" aria-hidden="true">// CORE SYSTEMS</div>
+      <h2 class="section-title" id="features-title">
+        Integrated <span class="gradient-text">Capabilities</span>
+      </h2>
+      <p class="section-sub">Six proprietary technologies fused into one unified cybernetic operating system — engineered at the boundary of human biology and machine intelligence.</p>
+
+      <div class="features__grid">
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="18" stroke="#00D4FF" stroke-width="1.5" opacity="0.3"/>
+              <path d="M24 8 C24 8 16 14 16 24 C16 34 24 40 24 40" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M24 8 C24 8 32 14 32 24 C32 34 24 40 24 40" stroke="#00FFFF" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="4" fill="#00D4FF"/>
+              <line x1="8" y1="24" x2="20" y2="24" stroke="#00D4FF" stroke-width="1"/>
+              <line x1="28" y1="24" x2="40" y2="24" stroke="#00D4FF" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Neural Interface</h3>
+          <p class="feat-card__desc">Direct synaptic-to-digital bridge enabling thought-speed command execution with 0.3ms latency across 128 neural channels.</p>
+          <div class="feat-card__tag mono">SYS.NEURAL.v9</div>
+        </article>
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="10" y="10" width="28" height="28" rx="6" stroke="#7B2CBF" stroke-width="1.5"/>
+              <path d="M18 18 L24 12 L30 18 L30 30 L24 36 L18 30 Z" fill="#7B2CBF" opacity="0.3" stroke="#7B2CBF" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="4" fill="#7B2CBF"/>
+              <line x1="24" y1="10" x2="24" y2="14" stroke="#7B2CBF" stroke-width="2"/>
+              <line x1="24" y1="34" x2="24" y2="38" stroke="#7B2CBF" stroke-width="2"/>
+              <line x1="10" y1="24" x2="14" y2="24" stroke="#7B2CBF" stroke-width="2"/>
+              <line x1="34" y1="24" x2="38" y2="24" stroke="#7B2CBF" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">AI Decision Engine</h3>
+          <p class="feat-card__desc">Quantum-accelerated reasoning core that processes 2.4 billion variables per second to deliver optimal decisions under any condition.</p>
+          <div class="feat-card__tag mono">SYS.COGNITION.v12</div>
+        </article>
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <ellipse cx="24" cy="24" rx="16" ry="10" stroke="#00FFFF" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="5" fill="#00FFFF" opacity="0.8"/>
+              <circle cx="24" cy="24" r="9" stroke="#00FFFF" stroke-width="1" opacity="0.4"/>
+              <line x1="8" y1="24" x2="14" y2="24" stroke="#00FFFF" stroke-width="1.5"/>
+              <line x1="34" y1="24" x2="40" y2="24" stroke="#00FFFF" stroke-width="1.5"/>
+              <path d="M14 16 L14 32" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
+              <path d="M34 16 L34 32" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Enhanced Vision</h3>
+          <p class="feat-card__desc">360° multispectral optical array with thermal, infrared, and ultraviolet overlays — seeing what human eyes never could.</p>
+          <div class="feat-card__tag mono">SYS.OPTICS.v7</div>
+        </article>
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 6 L42 16 L42 32 L24 42 L6 32 L6 16 Z" stroke="#FF006E" stroke-width="1.5" fill="none"/>
+              <path d="M24 14 L34 20 L34 30 L24 36 L14 30 L14 20 Z" stroke="#FF006E" stroke-width="1" fill="#FF006E" fill-opacity="0.1"/>
+              <circle cx="24" cy="24" r="4" fill="#FF006E"/>
+              <line x1="24" y1="6" x2="24" y2="14" stroke="#FF006E" stroke-width="1.5"/>
+              <line x1="24" y1="34" x2="24" y2="42" stroke="#FF006E" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Predictive Intelligence</h3>
+          <p class="feat-card__desc">Temporal pattern modeling that anticipates events 340ms before they occur — acting before the moment demands it.</p>
+          <div class="feat-card__tag mono">SYS.PREDICT.v5</div>
+        </article>
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 8 C14 12 10 20 10 24 C10 34 16 40 24 42 C32 40 38 34 38 24 C38 20 34 12 24 8Z" stroke="#00D4FF" stroke-width="1.5" fill="none"/>
+              <path d="M18 22 L22 26 L30 18" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="24" r="10" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Bio-Sync Integration</h3>
+          <p class="feat-card__desc">Seamless biological-digital handshake that continuously monitors, calibrates, and optimizes the human-machine symbiosis in real time.</p>
+          <div class="feat-card__tag mono">SYS.BIOSYNC.v3</div>
+        </article>
+
+        <article class="feat-card" tabindex="0">
+          <div class="feat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="14" y="18" width="20" height="16" rx="3" stroke="#7B2CBF" stroke-width="1.5"/>
+              <path d="M18 18 L18 14 C18 10 22 8 24 8 C26 8 30 10 30 14 L30 18" stroke="#7B2CBF" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="24" cy="26" r="3" fill="#7B2CBF"/>
+              <line x1="24" y1="29" x2="24" y2="32" stroke="#7B2CBF" stroke-width="1.5"/>
+              <circle cx="14" cy="34" r="1.5" fill="#00FFFF"/>
+              <circle cx="34" cy="34" r="1.5" fill="#00FFFF"/>
+            </svg>
+          </div>
+          <h3 class="feat-card__title">Quantum Security</h3>
+          <p class="feat-card__desc">Post-quantum encryption lattice protecting every neural transmission with 4096-bit keys that no known or theoretical attack can break.</p>
+          <div class="feat-card__tag mono">SYS.SECURITY.v11</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECHNOLOGY SHOWCASE ===================== -->
+  <section class="tech section" id="technology" aria-labelledby="tech-title">
+    <div class="container">
+      <div class="tech__layout">
+        <div class="tech__left reveal">
+          <div class="section-eyebrow">// ARCHITECTURE</div>
+          <h2 class="section-title" id="tech-title">The Core <span class="gradient-text">Architecture</span></h2>
+          <p class="tech__desc">NEXUS CORTEX is not a product — it is a paradigm. Built on a foundation of self-evolving neural mesh, every component learns, adapts, and improves with each millisecond of operation.</p>
+          <p class="tech__desc" style="margin-top:1rem;">Our proprietary BioStack protocol creates a zero-latency bridge between organic neural pathways and silicon-based computation, enabling a seamless symbiosis that feels less like technology and more like thought.</p>
+
+          <div class="tech__stats">
+            <div class="tech-stat">
+              <span class="tech-stat__num">99.98<span style="font-size:0.6em">%</span></span>
+              <span class="tech-stat__label">System Accuracy</span>
+            </div>
+            <div class="tech-stat">
+              <span class="tech-stat__num">12<span style="font-size:0.6em">ms</span></span>
+              <span class="tech-stat__label">Response Time</span>
+            </div>
+            <div class="tech-stat">
+              <span class="tech-stat__num">500M<span style="font-size:0.6em">+</span></span>
+              <span class="tech-stat__label">Data Points / Day</span>
+            </div>
+            <div class="tech-stat">
+              <span class="tech-stat__num">24/7</span>
+              <span class="tech-stat__label">Autonomous Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech__right reveal reveal--right">
+          <div class="dashboard">
+            <div class="dashboard__header">
+              <div class="dashboard__dots">
+                <span style="background:#FF006E"></span>
+                <span style="background:#FFD600"></span>
+                <span style="background:#00D4FF"></span>
+              </div>
+              <span class="mono" style="font-size:11px;color:#555">NEXUS_CORTEX_MONITOR</span>
+            </div>
+
+            <div class="dashboard__body">
+              <!-- Top metrics row -->
+              <div class="db-row">
+                <div class="db-metric">
+                  <span class="mono db-label">NEURAL LOAD</span>
+                  <div class="db-bar-wrap">
+                    <div class="db-bar-fill" style="--target:73%;background:linear-gradient(90deg,#00D4FF,#00FFFF)"></div>
+                  </div>
+                  <span class="mono db-value">73%</span>
+                </div>
+                <div class="db-metric">
+                  <span class="mono db-label">SYNC RATE</span>
+                  <div class="db-bar-wrap">
+                    <div class="db-bar-fill" style="--target:91%;background:linear-gradient(90deg,#7B2CBF,#FF006E)"></div>
+                  </div>
+                  <span class="mono db-value">91%</span>
+                </div>
+              </div>
+
+              <!-- Mini chart -->
+              <div class="db-chart-wrap">
+                <span class="mono db-label" style="margin-bottom:6px;display:block">COGNITIVE OUTPUT — LAST 8 CYCLES</span>
+                <svg class="db-chart" viewBox="0 0 260 70" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 55 L33 42 L66 50 L99 28 L132 35 L165 18 L198 25 L231 10 L260 15 L260 70 L0 70Z" fill="url(#chartGrad)"/>
+                  <path d="M0 55 L33 42 L66 50 L99 28 L132 35 L165 18 L198 25 L231 10 L260 15" fill="none" stroke="#00D4FF" stroke-width="2"/>
+                  <circle cx="231" cy="10" r="3" fill="#00FFFF"/>
+                  <circle cx="260" cy="15" r="3" fill="#00FFFF"/>
+                </svg>
+              </div>
+
+              <!-- Status grid -->
+              <div class="db-status-grid">
+                <div class="db-status">
+                  <span class="status-dot status-dot--on"></span>
+                  <span class="mono" style="font-size:10px">Neural Mesh</span>
+                </div>
+                <div class="db-status">
+                  <span class="status-dot status-dot--on"></span>
+                  <span class="mono" style="font-size:10px">Quantum Core</span>
+                </div>
+                <div class="db-status">
+                  <span class="status-dot status-dot--on"></span>
+                  <span class="mono" style="font-size:10px">Bio-Sync</span>
+                </div>
+                <div class="db-status">
+                  <span class="status-dot status-dot--warn"></span>
+                  <span class="mono" style="font-size:10px">Uplink</span>
+                </div>
+                <div class="db-status">
+                  <span class="status-dot status-dot--on"></span>
+                  <span class="mono" style="font-size:10px">Vision Array</span>
+                </div>
+                <div class="db-status">
+                  <span class="status-dot status-dot--on"></span>
+                  <span class="mono" style="font-size:10px">Encryption</span>
+                </div>
+              </div>
+
+              <!-- Bottom alert -->
+              <div class="db-alert">
+                <span class="status-dot status-dot--on" style="flex-shrink:0"></span>
+                <span class="mono" style="font-size:10px;color:#00FFFF">ALL CRITICAL SYSTEMS NOMINAL — CORTEX FULLY OPERATIONAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVOLUTION TIMELINE ===================== -->
+  <section class="evolution section" id="evolution" aria-labelledby="evolution-title">
+    <div class="container">
+      <div class="section-eyebrow">// PROGRESSION</div>
+      <h2 class="section-title" id="evolution-title">The <span class="gradient-text">Evolution</span> Path</h2>
+      <p class="section-sub">Four stages of transformation — from biological origin to synthetic transcendence.</p>
+
+      <div class="timeline">
+        <div class="timeline__line" aria-hidden="true"></div>
+
+        <div class="timeline__item reveal" data-stage="01">
+          <div class="timeline__dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline__card">
+            <div class="tl-stage mono">STAGE 01</div>
+            <h3 class="tl-title">Human</h3>
+            <p class="tl-desc">The biological baseline. 86 billion neurons, 37 trillion cells — nature's masterpiece, yet bound by its own limits of speed, memory, and perception.</p>
+            <div class="tl-spec"><span class="mono" style="color:#555">PROCESSING: ~120 b/s</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal" data-stage="02">
+          <div class="timeline__dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline__card">
+            <div class="tl-stage mono">STAGE 02</div>
+            <h3 class="tl-title">Enhanced Human</h3>
+            <p class="tl-desc">Neural augmentation begins. Exocortex implants expand working memory tenfold. Sensory overlays unlock spectra invisible to the naked eye. The gap between thought and action narrows to microseconds.</p>
+            <div class="tl-spec"><span class="mono" style="color:#00D4FF">PROCESSING: ~4.2 kb/s</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal" data-stage="03">
+          <div class="timeline__dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline__card">
+            <div class="tl-stage mono">STAGE 03</div>
+            <h3 class="tl-title">Cyborg</h3>
+            <p class="tl-desc">Full biological-silicon integration. Quantum cores replace cognitive bottlenecks. The NEXUS CORTEX fuses permanently with the central nervous system — a being no longer limited by flesh alone.</p>
+            <div class="tl-spec"><span class="mono" style="color:#7B2CBF">PROCESSING: ~900 Mb/s</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal" data-stage="04">
+          <div class="timeline__dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline__card">
+            <div class="tl-stage mono">STAGE 04</div>
+            <h3 class="tl-title">Super Intelligence</h3>
+            <p class="tl-desc">Consciousness distributed across quantum networks. Time-dilation processing simulates 1000 years of thought per second. The final convergence — where human identity and machine omniscience become one.</p>
+            <div class="tl-spec"><span class="mono" style="color:#FF006E">PROCESSING: ∞ UNBOUNDED</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials section" id="testimonials" aria-labelledby="testi-title">
+    <div class="container">
+      <div class="section-eyebrow">// FIELD REPORTS</div>
+      <h2 class="section-title" id="testi-title">Integrated <span class="gradient-text">Operators</span></h2>
+      <p class="section-sub">From defense contractors to biotech pioneers — those who've crossed the threshold speak.</p>
+
+      <div class="testi__grid">
+
+        <article class="testi-card reveal" tabindex="0">
+          <div class="testi-card__quote" aria-hidden="true">"</div>
+          <p class="testi-card__text">The Neural Interface reduced our surgical team's reaction latency by 94%. Procedures that once took six hours now complete in forty minutes. NEXUS didn't improve our capabilities — it redefined what capability means.</p>
+          <div class="testi-card__footer">
+            <div class="testi-avatar" aria-hidden="true">
+              <span>DR</span>
+              <div class="avatar-ring"></div>
+            </div>
+            <div class="testi-info">
+              <span class="testi-name">Dr. Reyes Nakamura</span>
+              <span class="testi-role mono">Chief Surgeon · SynthMed Corp</span>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card reveal" tabindex="0">
+          <div class="testi-card__quote" aria-hidden="true">"</div>
+          <p class="testi-card__text">Integrating NEXUS into our autonomous defense systems gave us threat anticipation we couldn't have imagined. It predicted adversarial patterns 340ms ahead of real-time — the difference between mission success and catastrophic failure.</p>
+          <div class="testi-card__footer">
+            <div class="testi-avatar" aria-hidden="true">
+              <span>CM</span>
+              <div class="avatar-ring"></div>
+            </div>
+            <div class="testi-info">
+              <span class="testi-name">Cmdr. Aleksei Voss</span>
+              <span class="testi-role mono">Systems Director · ArcLight Defense</span>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card reveal" tabindex="0">
+          <div class="testi-card__quote" aria-hidden="true">"</div>
+          <p class="testi-card__text">Our quantum AI research accelerated by an order of magnitude after Bio-Sync Integration. The ability to co-process biological intuition alongside raw compute power is not just impressive — it is the most important technological shift of our generation.</p>
+          <div class="testi-card__footer">
+            <div class="testi-avatar" aria-hidden="true">
+              <span>ZK</span>
+              <div class="avatar-ring"></div>
+            </div>
+            <div class="testi-info">
+              <span class="testi-name">Dr. Zara Khatri</span>
+              <span class="testi-role mono">Lead Researcher · QuantumAxis Labs</span>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta-section section" id="cta" aria-labelledby="cta-title">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-orb cta-orb--1"></div>
+      <div class="cta-orb cta-orb--2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-inner">
+        <div class="section-eyebrow" style="justify-content:center">// INITIALIZATION PROTOCOL</div>
+        <h2 class="cta-title" id="cta-title">The Future Is<br><span class="gradient-text">Already Here</span></h2>
+        <p class="cta-sub">Join the cybernetic revolution and unlock limitless possibilities. Your biological limitations expire today.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn--primary btn--large">
+            <span class="btn__inner">Get Started</span>
+            <span class="btn__glitch" aria-hidden="true">Get Started</span>
+          </a>
+          <a href="#" class="btn btn--ghost btn--large">Schedule Demo</a>
+        </div>
+        <p class="cta-fine mono">No implant required for initial consultation. — NEXUS CORP © 2047</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo" style="font-size:1.3rem" aria-label="NEXUS home">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">NEXUS</span>
+            <span class="logo-bracket">]</span>
+          </a>
+          <p class="footer__tagline">Merging human potential<br>with machine precision.</p>
+          <div class="footer__socials" aria-label="Social media links">
+            <a href="#" aria-label="Twitter/X" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.734l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__col" aria-label="Technology links">
+          <h4 class="footer__col-title mono">// SYSTEMS</h4>
+          <ul role="list">
+            <li><a href="#">Neural Interface</a></li>
+            <li><a href="#">AI Decision Engine</a></li>
+            <li><a href="#">Enhanced Vision</a></li>
+            <li><a href="#">Quantum Security</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Company links">
+          <h4 class="footer__col-title mono">// COMPANY</h4>
+          <ul role="list">
+            <li><a href="#">About NEXUS</a></li>
+            <li><a href="#">Research Lab</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title mono">// CONTACT</h4>
+          <ul role="list">
+            <li><a href="mailto:cortex@nexus.ai">cortex@nexus.ai</a></li>
+            <li><a href="#">+1 (888) NEX-CORP</a></li>
+            <li><a href="#">Neo-Tokyo, Sector 7</a></li>
+            <li><a href="#">Earth, 2047</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="mono" style="color:#333;font-size:11px">© 2047 NEXUS CORPORATION. ALL RIGHTS RESERVED. NEXUS CORTEX® IS A REGISTERED CYBERNETIC TRADEMARK.</span>
+        <div style="display:flex;gap:1.5rem">
+          <a href="#" style="color:#333;font-size:11px;font-family:'Share Tech Mono',monospace">PRIVACY</a>
+          <a href="#" style="color:#333;font-size:11px;font-family:'Share Tech Mono',monospace">ETHICS</a>
+          <a href="#" style="color:#333;font-size:11px;font-family:'Share Tech Mono',monospace">LICENSE</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
